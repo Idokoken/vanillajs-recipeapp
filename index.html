@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   	 <meta charset="UTF-8">
+     <meta name="description" content="special recipe finding site">
+     <meta name="keywords" content="Meal, Recipe, Preparation">
+     <meta name="author" content="Kenneth">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/index.css" />
+		  <link rel="stylesheet" href="css/fontawesome.min.css" />
+      <title>recipe app</title>
+   </head>
+   <body>
+      <header>
+      	 <img src='images/brand.png' alt='brand'>
+      	 	<h1>Modern Meal Recipe </h1>
+      </header>
+      
+      <!-- main section -->
+      <main>
+      	 <h2>Meal Finder</h2>
+      	 <div class='mealfinder'>
+      	 <form id='submit'>
+      	 	 <input id='search' placeholder='enter meal' >
+      	 	 	<button type='submit' class='search-btn'>
+      	 	 		<i class='fa fa-search'></i>
+      	 	 	</button>
+      	 </form>
+      	 <button id='random' class='random-btn'>
+      	 	 	<i class='fa fa-random'></i>
+      	 	</button>
+      	</div>
+      	<div class='mealResult'>
+      		<div id='mealHeading'></div>
+      		<div id='meals' class='meals'></div>
+      		<div id='single-meal'></div>
+      	</div>
+     </main>
+      
+      <!-- footer section -->
+      <footer>
+      	 <p>&#copy; 2022, All right Reserved to IdokoKen
+      </footer>
+      
+      <!-- javascript -->
+      <script src='js/index.js'></script>
+      <script src='js/all.js'></script>
+   </body>
+</html>

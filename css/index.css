@@ -1,0 +1,41 @@
+@import "header.css";
+@import "footer.css";
+
+:root {
+  --primary-color: #991397;
+  --secondary-color: #ADA6A3;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	font-family:+AKA"Times New Roman", Times, serif;
+}
+.meals {
+	display: grid;
+	grid-template-column: repeat(4, 1f);
+	grid-gap: 10px;
+	margin-top: 20px;
+}
+.meal {
+	height: 180px;
+	width: 180px;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+}
+.meal img {
+	height: 100%;
+	width: 100%;
+	border-radius: 4px;
+	border: 4px solid white;
+}
+
+/* medium screen responsiveness */
+@media and only screen (min-width: 768px) {
+	
+}

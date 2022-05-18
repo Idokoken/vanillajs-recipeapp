@@ -1,0 +1,18 @@
+
+header{
+	background-color: var(--primary-color);
+	color: black;
+	box-shadow: 10px 10px 8px 10px #888888;
+	position: sticky;
+	top: 0;
+}
+header h1 {
+	color: red;
+}
+
+
+
+/* medium screen responsiveness */
+@media and only screen (min-width: 768px) {
+	
+}

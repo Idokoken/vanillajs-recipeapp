@@ -37,12 +37,29 @@ if(input.trim()) {
 	}
 }
 	alert('enter meal')
-	
-
-
 }
+
+// fetch $ get random meal
+async function randomMeal() {
+	mealsEl.innerHTML = ''
+	mealHeading.innerHTML = ''
+	try{
+		const res = await fetch('')
+		const data = await res.json()
+		const meal = data.meals[0]
+		
+		addMealToDom(meal)
+	}catch(err){
+		console.log(err)
+	}
+}
+
+
 //handle meal submit
 submit.addEventListener('submit', searchMeal)
+//handle random meal submit
+random.addEventListener('click', randomMeal)
+
 
 //single meal function
 async function getMealId(mealId) {
@@ -60,11 +77,28 @@ function addMealToDom(meal){
 	const ingridents = []
 	for(let i = 1; i <= 20; i++) {
 		if(meal[`strIngrident${i}`]) {
-			ingridents.push(`${meal[`strIngrident${i}`]}`)
+			ingridents.push(`${meal[`strIngrident${i}`]} - ${meal[`strMeasure${i}`]}`)
 		} else {
-			
+			break;
 		}
 	}
+	single_meal.innerHTML = `<div class='singleMeal'>
+	 <h2>${meal.strMeal}</h2>
+	 <img src='${meal.strMealThumb}' alt='${meal.strMeal}' />
+	 <div class='singleMealInfo'>
+	  ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ''}
+	  ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
+	 </div>
+	 <div class='main'>
+	   <p>${meal.strInstructions}</p>
+	   <h2>Ingridents</h2>
+	   <ul>
+	     ${ingridents.map((ingr, i) => {
+	     return 	`<li>${ingr}</li>`
+	     }).join()}
+	   </ul>
+	 </div>
+	</div>`
 }
 
 // get single meal

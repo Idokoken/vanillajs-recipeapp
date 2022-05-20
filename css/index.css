@@ -17,7 +17,7 @@ body{
 }
 .meals {
 	display: grid;
-	grid-template-column: repeat(4, 1f);
+	grid-template-column: repeat(2, 1f);
 	grid-gap: 10px;
 	margin-top: 20px;
 }
@@ -43,7 +43,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	backgtound: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.7);
 	transition: opacity 0.2s ease-in;
 	opacity: 0;
 }
@@ -54,8 +54,50 @@ body{
 main{
 	min-height: 80vh;
 }
+.singleMeal{
+	margin: 30px auto;
+	width: 70%;
+}
+.singleMeal img{
+	 margin: 15px;
+	 border: 4px solid #fff;
+	 width: 300px;
+	 border-radius: 5px;
+}
+.singleMealInfo{
+	margin: 20px;
+	padding: 10px;
+	border: 2px dashed #A9852A;
+	 border-radius: 5px;
+}
+.singleMeal p{
+	margin: 0;
+	line-spacing: 0.5px;
+	line-height: 1.6;
+}
+.singleMeal ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.singleMeal ul li{
+	background: white;
+	font-size: 14px;
+	font-weight: 700;
+	display: inline-block;
+	color: dark;
+}
 
 /* medium screen responsiveness */
 @media and only screen (min-width: 768px) {
-	
+	.meals{
+		grid-template-column: repeat(3, 1f);
+	}
+}
+
+/* medium screen responsiveness */
+@media and only screen (min-width: 1024px) {
+	.meals{
+		grid-template-column: repeat(4, 1f);
+	}
 }
